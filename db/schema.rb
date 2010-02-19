@@ -9,10 +9,25 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20100219213717) do
+ActiveRecord::Schema.define(:version => 20100219214519) do
 
   create_table "categories", :force => true do |t|
     t.string   "name"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "projects", :force => true do |t|
+    t.integer  "category_id"
+    t.integer  "order_num",              :default => 0
+    t.string   "title"
+    t.string   "url"
+    t.string   "client"
+    t.string   "thumbnail_file_name"
+    t.string   "thumbnail_content_type"
+    t.integer  "thumbnail_file_size"
+    t.datetime "thumbnail_created_at"
+    t.datetime "thumbnail_updated_at"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
