@@ -1,0 +1,16 @@
+<div class="form_block">
+  <%= f.text_field :title %>
+  <%= f.text_field :url %>
+  <%= f.text_field :client %>
+</div>
+
+<div class="form_block">
+  <div class="field_wrap form_section">
+    <h4>Main Image</h4>
+    <%= render :partial => 'image', :locals => { :object         => @project, 
+                                                 :image_name     => 'thumbnail', 
+                                                 :thumbnail_name => 'thumb',
+                                                 :f              => f,
+                                                 :hint           => 'Image should be 180x120px'} %>
+  </div>
+</div>

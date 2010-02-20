@@ -1,0 +1,25 @@
+<% image = object.send(image_name) %>
+
+<div class="boxed clearfix project_asset">
+  <div class="inset">
+    <% unless !@project.thumbnail? -%>
+      <%= image_tag image.url %>
+      <p class="file_details"><%= object.send("#{image_name}_file_name") %> (<%= "#{number_to_human_size(image.size)}" %>)</p>
+    <% end -%>
+  </div>
+  <div class="indent">
+    <div class="asset_fields form_section">
+      <div class="clearfix field_wrap upload">
+        <% label_name = (!@project.thumbnail?) ? "Upload a file" : "Upload a replacement" -%>
+        <%= f.label :image, "#{label_name}", :class => 'upload' %>
+        <%= f.file_field image_name.to_sym %>
+        <span class="info"><%= hint %></span>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+
+

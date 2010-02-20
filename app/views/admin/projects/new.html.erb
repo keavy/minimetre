@@ -1,0 +1,15 @@
+<h2>Create a new project</h2>
+
+<div class="main left">
+  <%= error_messages_for :project %>
+
+  <% labeled_form_for @project, :url => admin_projects_path do |f| %>
+    
+    <%= render :partial => 'fields', :locals => {:f => f} %>
+      
+    <%= f.submit "Create project" %>
+  <% end %>
+</div>
+
+<div class="side right">
+</div>
