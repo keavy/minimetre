@@ -1,5 +1,5 @@
 <div class="form_block">
-  <%= f.select :category_id, Project::CATEGORIES %>
+  <%= f.select :category, Project::CATEGORIES.invert %>
   <%= f.text_field :title %>
   <%= f.text_field :url %>
   <%= f.text_field :client %>
