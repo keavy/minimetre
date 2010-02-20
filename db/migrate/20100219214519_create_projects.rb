@@ -1,9 +1,8 @@
 class CreateProjects < ActiveRecord::Migration
   def self.up
     create_table :projects do |t|
-      t.integer :category_id
       t.integer :order_num, :default => 0
-      t.string :title
+      t.string :title, :category
       t.string :url
       t.string :client
       t.string :thumbnail_file_name

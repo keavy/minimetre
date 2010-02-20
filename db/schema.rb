@@ -18,9 +18,9 @@ ActiveRecord::Schema.define(:version => 20100219214519) do
   end
 
   create_table "projects", :force => true do |t|
-    t.integer  "category_id"
     t.integer  "order_num",              :default => 0
     t.string   "title"
+    t.string   "category"
     t.string   "url"
     t.string   "client"
     t.string   "thumbnail_file_name"
