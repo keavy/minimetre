@@ -3,5 +3,6 @@ ActionController::Routing::Routes.draw do |map|
   map.namespace :admin do |admin|
     admin.resources :projects, :categories
   end
-
+  
+  map.root :controller => 'projects'
 end

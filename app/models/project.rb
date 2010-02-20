@@ -9,4 +9,6 @@ class Project < ActiveRecord::Base
                  'dev'    => 'Technical Consultant / Development',
                  'side'   => 'Personal project'
                }
+               
+  default_scope :order => 'order_num'
 end

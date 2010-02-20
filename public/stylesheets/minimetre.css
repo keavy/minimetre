@@ -1,0 +1,36 @@
+.clearfix:after {
+    content: "."; 
+    display: block; 
+    height: 0; 
+    clear: both; 
+    visibility: hidden;
+}
+
+/* Hides from IE-mac \*/
+* html .clearfix {height: 1%;}
+/* End hide from IE-mac */
+
+body{
+	font-family: "Helvetica Neue", Arial, Helvetica, sans-serif;
+	color: #666666;
+}
+
+#hd{font-size: 93%;}
+#bd{font-size: 93%;}
+
+
+body,html{background: url(../images/bg.gif) center 0 repeat-y #f4f5f5; text-align: center;}
+#doc{width: 822px; margin: 58px auto; text-align: left;}
+#intro #text{width: 390px;}
+
+/* text */
+#intro p{font-size: 131%; line-height: 161.6%; padding-bottom: 8px;}
+
+/* links */
+a{color: #ea2027; text-decoration: none; border-bottom: 1px dotted #9d9ea1;}
+
+/* images */
+img#logo{float: left;}
+img#listen{float: right;}
+
+#hd{margin-bottom: 20px;}
