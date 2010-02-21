@@ -7,6 +7,7 @@ class Project < ActiveRecord::Base
                     
   CATEGORIES = { 'pm'     => 'Project Management / Development',
                  'dev'    => 'Technical Consultant / Development',
+                 'ruby'   => 'Ruby Development',
                  'side'   => 'Side project'
                }
                
