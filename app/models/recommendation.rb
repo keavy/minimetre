@@ -1,3 +1,17 @@
+# == Schema Information
+# Schema version: 20100221164519
+#
+# Table name: recommendations
+#
+#  id         :integer(4)      not null, primary key
+#  message    :text
+#  name       :string(255)
+#  title      :string(255)
+#  company    :string(255)
+#  created_at :datetime
+#  updated_at :datetime
+#
+
 class Recommendation < ActiveRecord::Base
   validates_presence_of :message
   validates_presence_of :name
