@@ -1,16 +1,7 @@
 .block
 
-  %h2 PROJECTS
-  %ul#menu
-    %li 
-      = link_to 'View All', '#', :class => 'active'
-    %li 
-      = link_to 'Project Management', '#'
-    %li
-      = link_to 'Technical consultant / Development', '#'
-    %li
-      = link_to 'Side Project', '#'
-    
+  %h2 RECENT PROJECTS
+
   %ul#projects.clearfix
     - i=1
     - @projects.each do |project|
@@ -21,25 +12,24 @@
         %p.category 
           = Project::CATEGORIES[project.category]
         - i=i+1
-     
-.block
+
+- if @recommendations
+  - split = @recommendations.size/2
+  .block
    
-  %h2 WHAT MY CLIENTS SAY
-  .clearfix
-    %ul.quotes.left
-      %li
-        %blockquote Keavy showed an impressive output while consistently delivering high quality code.
-        %cite Richard Viard, VP of Product & Technology at CauseLoyalty, LLC
-      %li
-        %blockquote Keavy showed an impressive output while consistently delivering high quality code.
-        %cite Richard Viard, VP of Product & Technology at CauseLoyalty, LLC
+    %h2 WHAT MY CLIENTS SAY
+    .clearfix
+      %ul.quotes.left
+        - @recommendations[0..split-1].each do |recommendation|
+          %li
+            %blockquote= recommendation.message
+            %cite= recommendation.from
+
         
-    %ul.quotes.right
-      %li
-        %blockquote Keavy showed an impressive output while consistently delivering high quality code.
-        %cite Richard Viard, VP of Product & Technology at CauseLoyalty, LLC
-      %li
-        %blockquote Keavy showed an impressive output while consistently delivering high quality code.
-        %cite Richard Viard, VP of Product & Technology at CauseLoyalty, LLC
-      
+      %ul.quotes.right
+        - @recommendations[split..@recommendations.size].each do |recommendation|
+          %li
+            %blockquote= recommendation.message
+            %cite= recommendation.from
+
 

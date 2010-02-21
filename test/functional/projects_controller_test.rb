@@ -11,5 +11,6 @@ class ProjectsControllerTest < ActionController::TestCase
     
     should_respond_with :success
     should_assign_to :projects
+    should_assign_to :recommendations
   end
 end

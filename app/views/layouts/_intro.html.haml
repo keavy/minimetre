@@ -1,7 +1,16 @@
 #intro.clearfix
   #text.left
-    %p intro text
-    
-  #quote.right
-    %blockquote Keavy showed an impressive output while consistently delivering high quality code.
-    %cite Richard Viard, VP of Product & Technology at CauseLoyalty, LLC
+    %p My name is Keavy McMinn and I am a web application developer based in Glasgow, UK.
+
+    %p I specialise in Ruby on Rails applications with a focus on the people that will use them.
+
+    %p I am passionate about testing and using Agile methods for the development process.
+
+    %p 
+      You should 
+      = mail_to "hello@minimetre.com", "get in touch", :encode => :hex
+  
+  - if @random
+    #quote.right
+      %blockquote= @random.message
+      %cite= @random.from
