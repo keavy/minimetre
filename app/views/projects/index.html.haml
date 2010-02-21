@@ -1,0 +1,25 @@
+.block
+
+  %h2 PROJECTS
+  %ul#menu
+    %li 
+      = link_to 'View All', '#', :class => 'active'
+    %li 
+      = link_to 'Project Management', '#'
+    %li
+      = link_to 'Technical consultant / Development', '#'
+    %li
+      = link_to 'Side Project', '#'
+    
+  %ul#projects
+    - i=1
+    - @projects.each do |project|
+      - list_class = (i%4 == 0) ? 'last' : ''
+      %li(class="#{list_class}")
+        = image_tag project.thumbnail.url
+        = link_to project.title, project.url
+        %p.category 
+          = Project::CATEGORIES[project.category]
+        - i=i+1
+      
+

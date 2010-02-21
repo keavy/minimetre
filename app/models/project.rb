@@ -7,7 +7,7 @@ class Project < ActiveRecord::Base
                     
   CATEGORIES = { 'pm'     => 'Project Management / Development',
                  'dev'    => 'Technical Consultant / Development',
-                 'side'   => 'Personal project'
+                 'side'   => 'Side project'
                }
                
   default_scope :order => 'order_num'
