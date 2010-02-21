@@ -11,15 +11,35 @@
     %li
       = link_to 'Side Project', '#'
     
-  %ul#projects
+  %ul#projects.clearfix
     - i=1
     - @projects.each do |project|
       - list_class = (i%4 == 0) ? 'last' : ''
       %li(class="#{list_class}")
-        = image_tag project.thumbnail.url
+        = link_to image_tag(project.thumbnail.url), project.url, :class => 'img'
         = link_to project.title, project.url
         %p.category 
           = Project::CATEGORIES[project.category]
         - i=i+1
+     
+.block
+   
+  %h2 WHAT MY CLIENTS SAY
+  .clearfix
+    %ul.quotes.left
+      %li
+        %blockquote Keavy showed an impressive output while consistently delivering high quality code.
+        %cite Richard Viard, VP of Product & Technology at CauseLoyalty, LLC
+      %li
+        %blockquote Keavy showed an impressive output while consistently delivering high quality code.
+        %cite Richard Viard, VP of Product & Technology at CauseLoyalty, LLC
+        
+    %ul.quotes.right
+      %li
+        %blockquote Keavy showed an impressive output while consistently delivering high quality code.
+        %cite Richard Viard, VP of Product & Technology at CauseLoyalty, LLC
+      %li
+        %blockquote Keavy showed an impressive output while consistently delivering high quality code.
+        %cite Richard Viard, VP of Product & Technology at CauseLoyalty, LLC
       
 

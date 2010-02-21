@@ -8,9 +8,7 @@
       = image_tag 'listen.gif', :id => 'listen'
 
     #bd.clearfix
-      #intro.clearfix
-        #text.left
-          %p intro text
+      = render :partial => 'layouts/intro'
 
     #content.clearfix
       = yield
