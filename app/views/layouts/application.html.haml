@@ -1,0 +1,18 @@
+!!!
+%html
+  = render :partial => 'layouts/head'
+  %body
+    #doc
+      #hd.clearfix
+        = image_tag 'logo.gif', :id => 'logo'
+        = image_tag 'listen.gif', :id => 'listen'
+
+      #bd.clearfix
+        #intro.clearfix
+          #text.left
+            %p intro text
+
+      #content.clearfix
+        = yield
+
+      #ft

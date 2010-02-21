@@ -1,0 +1,12 @@
+%head
+  %meta{ :name => "keywords",    :content => "Minimetre, Keavy McMinn, ruby, rails, testing, development, programming, Glasgow, Scotland" }/
+  %meta{ :name => "description", :content => "Minimetre#{": #{@page_title}" if @page_title}" }/
+  %meta{ :content => "text/html; charset=utf-8", "http-equiv" => "Content-type" }/
+  
+  %title
+    Minimetre
+    = " &middot; #{@page_title}" if @page_title
+      
+  = stylesheet_link_tag 'fonts-min',        :media => "all"
+  = stylesheet_link_tag 'reset-min',        :media => "all"
+  = stylesheet_link_tag 'minimetre',        :media => "all"
