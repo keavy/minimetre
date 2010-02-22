@@ -11,6 +11,9 @@
         = link_to project.title, project.url
         %p.category 
           = Project::CATEGORIES[project.category]
+        - unless project.client.blank?
+          %p.client 
+            = "for #{project.client}"
         - i=i+1
 
 - if @recommendations
