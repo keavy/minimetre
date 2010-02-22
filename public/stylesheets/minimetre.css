@@ -26,7 +26,7 @@ body,html{background: url(../images/bg.gif) center 0 repeat-y #f4f5f5; text-alig
 #intro{padding-bottom: 52px;}
 #intro #text{width: 393px;}
 #intro #quote{width: 396px;}
-.block{border-top: 2px solid #c2c2c3; padding-top: 15px;}
+.block{border-top: 2px solid #c2c2c3; padding-top: 15px; position: relative;}
 .left{float: left;}
 .right{float: right;}
 .column{width: 393px;}

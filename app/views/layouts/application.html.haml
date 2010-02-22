@@ -7,11 +7,11 @@
         = image_tag 'logo.gif', :id => 'logo'
         = link_to image_tag('listen.gif', :id => 'listen'), '#recommendations', :class => 'img'
 
-      #bd.clearfix
+      #bd
         = render :partial => 'layouts/intro'
 
-      #content.clearfix
-        = yield
+        #content.clearfix
+          = yield
 
       #ft
         = render :partial => 'layouts/footer'
