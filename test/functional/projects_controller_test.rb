@@ -6,6 +6,7 @@ class ProjectsControllerTest < ActionController::TestCase
       3.times {Factory(:project, :category => 'dev')}
       5.times {Factory(:project, :category => 'pm')}
       2.times {Factory(:project, :category => 'side')}
+      5.times {Factory(:recommendation)}
       get :index
     end
     

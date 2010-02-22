@@ -1,5 +1,5 @@
 # == Schema Information
-# Schema version: 20100221164519
+# Schema version: 20100222085128
 #
 # Table name: projects
 #
@@ -16,6 +16,7 @@
 #  thumbnail_updated_at   :datetime
 #  created_at             :datetime
 #  updated_at             :datetime
+#  live                   :boolean(1)      default(TRUE)
 #
 
 class Project < ActiveRecord::Base
@@ -24,7 +25,8 @@ class Project < ActiveRecord::Base
   has_attached_file :thumbnail,
                     :styles => { :original => "c180x120"}
                     
-                    
+  named_scope :live, :conditions => { :live => true }
+                 
   CATEGORIES = { 'pm'     => 'Project Management / Development',
                  'dev'    => 'Technical Consultant / Development',
                  'ruby'   => 'Ruby Development',

@@ -17,7 +17,8 @@
   - split = @recommendations.size/2
   .block
    
-    %h2 WHAT MY CLIENTS SAY
+    %h2 WHAT PEOPLE SAY
+    %a{:name => 'recommendations'}
     .clearfix
       %ul.quotes.left
         - @recommendations[0..split-1].each do |recommendation|

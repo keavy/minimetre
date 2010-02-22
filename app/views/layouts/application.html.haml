@@ -2,15 +2,16 @@
 %html
   = render :partial => 'layouts/head'
   %body
-  #doc
-    #hd.clearfix
-      = image_tag 'logo.gif', :id => 'logo'
-      = image_tag 'listen.gif', :id => 'listen'
+    #doc
+      #hd.clearfix
+        = image_tag 'logo.gif', :id => 'logo'
+        = link_to image_tag('listen.gif', :id => 'listen'), '#recommendations', :class => 'img'
 
-    #bd.clearfix
-      = render :partial => 'layouts/intro'
+      #bd.clearfix
+        = render :partial => 'layouts/intro'
 
-    #content.clearfix
-      = yield
+      #content.clearfix
+        = yield
 
-    #ft
+      #ft
+      = render :partial => 'layouts/tracking'

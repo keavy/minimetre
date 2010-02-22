@@ -1,5 +1,5 @@
 # == Schema Information
-# Schema version: 20100221164519
+# Schema version: 20100222085128
 #
 # Table name: recommendations
 #
@@ -10,13 +10,14 @@
 #  company    :string(255)
 #  created_at :datetime
 #  updated_at :datetime
+#  live       :boolean(1)      default(TRUE)
 #
 
 class Recommendation < ActiveRecord::Base
   validates_presence_of :message
   validates_presence_of :name
   
-  #named_scope :random, :conditions => "ORDER BY 'rand()'"
+  named_scope :live, :conditions => { :live => true }
   
   def self.random
     if (c = count) != 0

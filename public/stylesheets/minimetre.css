@@ -37,6 +37,7 @@ p.category{color: #9d9e9f; margin-top: 5px;}
 p.client{margin: 4px 0 0 0;}
 blockquote{font-size: 197%; color: #3e3e3e; font-style: italic; margin-bottom: 22px;}
 cite{font-size: 85%; color: #9d9e9f;}
+span.oh{color: #9d9e9f;}
 
 /* links */
 #menu a{color: #9d9e9f;}
