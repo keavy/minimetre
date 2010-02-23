@@ -1,5 +1,5 @@
 # == Schema Information
-# Schema version: 20100222085128
+# Schema version: 20100223101624
 #
 # Table name: projects
 #

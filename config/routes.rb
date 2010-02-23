@@ -4,5 +4,7 @@ ActionController::Routing::Routes.draw do |map|
     admin.resources :projects, :recommendations
   end
   
+  Clearance::Routes.draw(map)
+  
   map.root :controller => 'projects'
 end

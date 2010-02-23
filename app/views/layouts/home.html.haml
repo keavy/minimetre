@@ -5,11 +5,14 @@
     #doc
       #hd.clearfix
         = image_tag 'logo.gif', :id => 'logo'
-    
+        =# link_to image_tag('listen.gif', :id => 'listen'), '#recommendations', :class => 'img'
+
       #bd
-       
+        = render :partial => 'layouts/intro'
+
         #content.clearfix
           = yield
 
       #ft
+        = render :partial => 'layouts/footer'
       = render :partial => 'layouts/tracking'

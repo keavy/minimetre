@@ -1,4 +1,5 @@
 class ProjectsController < ApplicationController
+  layout 'home'
   def index
     @projects        = Project.live
     @random          = Recommendation.live.random
