@@ -1,0 +1,8 @@
+development:
+  hoptoad_key = ''
+
+test:
+  hoptoad_key = ''
+
+production:
+  hoptoad_key = ''
