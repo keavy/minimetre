@@ -23,7 +23,7 @@ class Project < ActiveRecord::Base
   validates_presence_of :title
   
   has_attached_file :thumbnail,
-                    :styles => { :original => "c180x120"}
+                    :styles => { :original => "180x120"}
                     
   named_scope :live, :conditions => { :live => true }
                  
