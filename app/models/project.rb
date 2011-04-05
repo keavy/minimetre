@@ -21,17 +21,21 @@
 
 class Project < ActiveRecord::Base
   validates_presence_of :title
-  
+
   has_attached_file :thumbnail,
                     :styles => { :original => "180x120"}
-                    
-  named_scope :live, :conditions => { :live => true }
-                 
+
   CATEGORIES = { 'pm'     => 'Project Management / Development',
                  'dev'    => 'Technical Consultant / Development',
                  'ruby'   => 'Ruby Development',
                  'side'   => 'Side project'
+
                }
-               
-  default_scope :order => 'order_num'
+  def self.live
+    where(:live => true )
+  end
+
+  def self.ordered
+    order(:order_num)
+  end
 end

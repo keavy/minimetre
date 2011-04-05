@@ -1,12 +1,4 @@
-tmp/*
-log/*
-*.sqlite3
-.DS_Store
-doc/**/*
-config/database.yml
-config/app_config.yml
-log/development.log
-log/test.log
-coverage.data
-metrics/*
-public/system/
+.bundle
+db/*.sqlite3
+log/*.log
+tmp/**/*

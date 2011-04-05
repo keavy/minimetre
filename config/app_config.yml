@@ -1,0 +1,8 @@
+development:
+  hoptoad_key: 6def231680bf5e4889efcc150e799b34
+
+test:
+  hoptoad_key:
+
+production:
+  hoptoad_key: 6def231680bf5e4889efcc150e799b34
