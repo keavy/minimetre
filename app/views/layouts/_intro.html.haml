@@ -1,16 +1,13 @@
 #intro.clearfix
   #text.left
-    %p I'm Keavy McMinn, a web developer based in<br />Glasgow, UK.
+    %p Minimetre is closed to new projects.
 
-    %p I specialise in building Ruby on Rails applications,<br /> with clean code and elegant user interfaces.
+    %p This is a selection of past projects.
 
-    %p I am an advocate for Test Driven Development and using Agile methods for the development process.
-
-    %p 
-      %sI'm open to new projects. 
+    %p
       Feel free to
       = mail_to "hello@minimetre.com", "get in touch", :encode => :hex
-  
+
   - if @random
     #quote.right
       %blockquote= @random.message
