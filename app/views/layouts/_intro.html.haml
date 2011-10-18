@@ -2,7 +2,7 @@
   #text.left
     %p Minimetre is closed to new projects.
 
-    %p This is a selection of past projects.
+    %p This is a selection of past work.
 
     %p
       Feel free to
@@ -10,5 +10,5 @@
 
   - if @random
     #quote.right
-      %blockquote= @random.message
+      %blockquote= raw @random.message
       %cite= @random.from

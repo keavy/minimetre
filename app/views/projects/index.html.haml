@@ -33,7 +33,7 @@
       %ul.quotes.right
         - @recommendations[split..@recommendations.size].each do |recommendation|
           %li
-            %blockquote= recommendation.message
+            %blockquote= raw recommendation.message
             %cite= recommendation.from
 
 
